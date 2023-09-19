@@ -6,8 +6,13 @@ const blogRouter = require('./Router/blog.route');
 const formRouter = require('./Router/form.route');
 const contentRouter = require('./Router/content.route');
 
+// if (process.env.NODE_ENV === 'development') {
+//     require('dotenv').config();
+// }
+
+
 const app = express();
-const PORT = 4321;
+const PORT = process.env.DB_PORT || 4321;
 
 app.use(cors());
 

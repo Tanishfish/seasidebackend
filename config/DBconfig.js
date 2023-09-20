@@ -9,8 +9,8 @@ const connection = mysql.createConnection({
 });
 
 try {
-    const st = connection.connect();
-    console.log('DB Connected Successfully'+st);
+     connection.connect();
+    console.log('DB Connected Successfully');
 } catch (error) {
     console.log(error.message);
 }
